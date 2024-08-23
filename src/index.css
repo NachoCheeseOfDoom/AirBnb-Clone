@@ -1,0 +1,20 @@
+:root {
+  /* font-family: poppins; */
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  padding: 20px;
+}
+
+.color-gray {
+  color: #918e9b;
+}

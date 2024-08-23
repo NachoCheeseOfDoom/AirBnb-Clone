@@ -1,0 +1,29 @@
+.card-container {
+  width: 175px;
+  font-size: 0.75rem;
+}
+
+.card-img {
+  border-radius: 9px;
+  width: 100%;
+}
+
+.card-stats {
+  display: flex;
+  align-items: center;
+  padding: 8px 0px;
+}
+
+.star-img {
+  width: 14px;
+}
+
+p {
+  margin: 4px 0px;
+  padding: 0;
+}
+
+.person-name {
+  font-size: 0.75rem;
+  font-weight: normal;
+}
