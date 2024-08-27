@@ -1,11 +1,16 @@
 .card-container {
   width: 175px;
   font-size: 0.75rem;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .card-img {
   border-radius: 9px;
   width: 100%;
+  margin-bottom: 9px;
 }
 
 .card-stats {
@@ -24,6 +29,23 @@ p {
 }
 
 .person-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 0.75rem;
   font-weight: normal;
+}
+
+.card--price {
+  margin-top: auto;
+}
+
+.card-badge {
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  padding: 2px 5px;
+  font-weight: bold;
+  background-color: #f0ecec;
+  font-size: 0.8rem;
+  border-radius: 3px;
 }

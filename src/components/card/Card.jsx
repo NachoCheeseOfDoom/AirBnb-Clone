@@ -1,25 +1,35 @@
+/* eslint-disable react/prop-types */
 import "./card.css";
-import personImg from "../../assets/images/katie-zaferes.png";
 import starImg from "../../assets/images/star.png";
 
-export const Card = () => {
+export const Card = ({ card }) => {
+  console.log(card);
+  let badgeText;
+  if (card.openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (card.location === "Online") {
+    badgeText = "ONLINE";
+  }
   return (
     <>
-      <section>
-        <div className="card-container">
-          <img src={personImg} alt="Katie Zaferes" className="card-img" />
-          <div className="card-stats">
-            <img src={starImg} alt="Star" className="star-img" />
-            <span>5.0</span>
-            <span className="color-gray">(6) • </span>
-            <span className="color-gray">USA</span>
-          </div>
-          <h2 className="person-name">Life lessons with Katie Zaferes</h2>
-          <p>
-            <strong>From $136</strong> / person
-          </p>
+      <div className="card-container">
+        {badgeText && <div className="card-badge">{badgeText}</div>}
+        <img
+          src={`src/assets/images/${card.coverImg}`}
+          alt="Katie Zaferes"
+          className="card-img"
+        />
+        <div className="card-stats">
+          <img src={starImg} alt="Star" className="star-img" />
+          <span>{card.stats.rating}</span>
+          <span className="color-gray">({card.stats.reviewCount}) • </span>
+          <span className="color-gray">{card.location}</span>
         </div>
-      </section>
+        <h2 className="person-name">{card.title}</h2>
+        <p className="card--price">
+          <strong>From ${card.price}</strong> / person
+        </p>
+      </div>
     </>
   );
 };
